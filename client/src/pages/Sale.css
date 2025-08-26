@@ -1,0 +1,98 @@
+.sale-container {
+   text-align : center;
+   padding : 30px
+}
+.sale-grid{
+     display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.sale-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.2s;
+}
+.sale-card:hover {
+  transform: translateY(-5px);
+}
+
+.img    -box {
+  position: relative;
+}
+.img-box img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height : 200px
+}
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 4px;
+  border-radius: 6px;
+}
+
+.price {
+  margin: 10px 0;
+}
+.price .original {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 10px;
+  font-size:16px
+}
+
+.price .discount {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+.discount-percent {
+  font-size: 14px;
+  font-weight: bold;
+  color: #d40000;
+  margin-bottom: 12px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sale-bag-btn,
+.sale-buy-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.sale-bag-btn {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.sale-bag-btn:hover {
+  background: #ddd;
+}
+
+.sale-buy-btn {
+  background: black;
+  color: #fff;
+}
+
+.sale-buy-btn:hover {
+  background: grey;
+}

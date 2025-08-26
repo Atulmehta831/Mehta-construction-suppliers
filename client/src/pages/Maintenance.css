@@ -1,0 +1,42 @@
+.maintenance-container{
+    display : flex ;
+    align-items : center;
+    justify-content: center ;
+    min-height: 100vh;
+    background: #f5f5f5;
+     padding: 20px;
+}
+.maintenance-card {
+     background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+  
+  text-align: center;
+ 
+
+
+}
+.maintenance-card h1 {
+  color: #ff9800;
+  margin-bottom: 20px;
+}
+.maintenance-card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+.maintenance-card .contact a {
+  color: #1DA1F2;
+  font-weight: bold;
+  text-decoration: none;
+}
+.maintenance-card .contact a:hover {
+  text-decoration: underline;
+}
+.maintenance-card .thanks {
+  margin-top: 20px;
+  font-style: italic;
+  color: #555;
+}

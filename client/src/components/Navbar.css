@@ -1,0 +1,159 @@
+/* NAVBAR */
+.navbar {
+  position: relative;
+  z-index: 10; /* keep lower than modal */
+  background-color: #D3D3D3;
+  padding: 2px 10px;
+  display: flex;
+  justify-content: space-between; /* left links / right icons */
+  align-items: center;
+  font-family: Arial, sans-serif;
+  
+}
+
+.navbar-left {
+  display: flex;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  
+}
+.navbar-links .sale-link {
+  color: red !important;
+  font-weight: bold;
+}
+.navbar-links .sale-link:hover {
+  color: darkred !important;
+  text-decoration: underline;
+}
+
+.navbar-links a:hover{
+  transform: translateY(-1px);
+}
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT SIDE ICONS */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* reusable icon button */
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+/* hover focus states */
+.icon-btn:hover,
+.icon-btn:focus {
+  background: rgba(0,0,0,0.05);
+  outline: none;
+}
+
+/* specific spacing/size */
+.cartIcon { /* additional styles if needed */ }
+.userIcon { /* additional styles if needed */ }
+
+/* === POPUP OVERLAY === */
+.auth-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* must be higher than navbar */
+  animation: fadeIn 0.18s ease;
+}
+
+/* === POPUP BOX === */
+.auth-popup {
+  background: #fff;
+  padding: 22px;
+  border-radius: 12px;
+  width: 340px;
+  max-width: 92%;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  position: relative;
+  animation: scaleUp 0.18s ease;
+}
+
+/* close button top-right */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 6px;
+  line-height: 1;
+}
+
+/* inputs + primary button */
+.auth-popup input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.primary-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3; /* Darker on hover */
+}
+/* animations */
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes scaleUp {
+  from { transform: scale(0.96); opacity: 0; } to { transform: scale(1); opacity: 1; }
+}
+
+/* responsive */
+@media (max-width: 480px) {
+  .auth-popup { width: 92%; padding: 16px; }
+  .navbar-links { gap: 12px; font-size: 14px; }
+}
